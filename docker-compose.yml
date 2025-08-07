@@ -1,0 +1,8 @@
+services:
+  frankenphp:
+    build:
+      context: .
+    ports:
+      - "8015:8015"
+    volumes:
+      - .:/app

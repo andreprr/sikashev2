@@ -1,0 +1,63 @@
+{
+    "menu": [
+        {
+            "url": "/",
+            "name": "Landing Page",
+            "icon": "ti ti-home",
+            "slug": "beranda",
+            "permission": ["dashboard"]
+        },
+        {
+            "menuHeader": "Menu"
+        },
+        {
+            "url": "/dashboard",
+            "name": "Dashboard",
+            "icon": "ti ti-layout-dashboard",
+            "slug": "dashboard",
+            "permission": ["dashboard"]
+        },
+        {
+            "url": "/user",
+            "name": "User",
+            "icon": "ti ti-user-circle",
+            "slug": "user",
+            "permission": ["user"]
+        },
+        {
+            "url": "/myprofile",
+            "name": "Profil",
+            "icon": "ti ti-user",
+            "slug": "myprofile",
+            "permission": ["userprofile"]
+        },
+        {
+            "url": "/job",
+            "name": "Daftar Kebutuhan",
+            "icon": "ti ti-file-description",
+            "slug": "job-index",
+            "permission": ["job"]
+        },
+        {
+            "url": "/forminput",
+            "name": "Riwayat Usulan",
+            "icon": "ti ti-file-description",
+            "slug": "forminput-index",
+            "permission": ["forminput"]
+        },
+        {
+            "name": "Master",
+            "icon": "ti ti-database",
+            "slug": "master",
+            "permission": ["master"],
+            "submenu": [
+                {
+                    "url": "/applicantsjob",
+                    "name": "Pekerjaan Pemohon",
+                    "slug": "master-applicantsjob",
+                    "permission": ["master"]
+                }
+            ]
+        }
+    ]
+}

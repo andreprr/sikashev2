@@ -1,0 +1,7 @@
+[php]
+script = "/app/public/index.php"
+
+[routes]
+# Serve static assets directly
+"/assets/*" = "/app/public/assets/"
+"/{.*}" = "/app/public/index.php"
