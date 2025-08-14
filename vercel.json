@@ -36,7 +36,7 @@
         "DB_CONNECTION": "pgsql",
         "DB_HOST": "157.15.164.54",
         "DB_PORT": "5000",
-        "DB_DATABASE": "kesbang",
-        "DB_USERNAME": "kesbang.2025!"
+        "DB_DATABASE": "db_kashev",
+        "DB_USERNAME": "kesbang"
     }
 }
