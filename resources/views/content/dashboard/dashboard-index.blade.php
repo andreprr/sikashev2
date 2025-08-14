@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col">
             <h6>Halo! {{ Auth::user()->name }}</h6>
-            <p>Selamat Datang.</p>
+            <p>Selamat Datang!.</p>
         </div>
         @if ($success = Session::get('message'))
         <div class="alert alert-success" role="alert">
