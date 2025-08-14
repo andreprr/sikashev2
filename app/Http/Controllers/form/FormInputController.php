@@ -290,7 +290,8 @@ class FormInputController extends Controller
             ->join('jobs', 'jobs.id', '=', 'form_inputs.job_id')
             ->join('opd','opd.id','jobs.opd_id')
             ->select('form_input_details.*','opd.name as opd_name')
-            ->where('uniq_id', $uniqid)->where('step_id', 1)->get();
+            ->where('uniq_id', $uniqid)->get();
+            
 
         $result = [];
         foreach ($data as $key => $value) {
@@ -325,14 +326,13 @@ class FormInputController extends Controller
         
         $formatted_finish_at = strftime('%A, %d %B %Y', $finish_at->getTimestamp());
         $formatted_finish_at = str_replace($english_day, $indonesian_day, $formatted_finish_at);
-
+        
 
 
         $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(app_path('Exports/Templates/suket_penelitian_khev.docx'));
-
         $templateProcessor->setValue(
-            ['institution', 'id_card_number', 'start_at','finish_at','name','applicant_job','opd_name'],
-            [$result->institution ?? '', $result->id_card_number ?? '', $formatted_start_at ?? '', $formatted_finish_at ?? '', $result->name ?? '', $result->applicant_job ?? '', $result->opd_name ?? '']
+            ['nomor_surat','institution', 'id_card_number', 'start_at','finish_at','name','applicant_job','opd_name'],
+            [$result->nomor_surat ?? '',$result->institution ?? '', $result->id_card_number ?? '', $formatted_start_at ?? '', $formatted_finish_at ?? '', $result->name ?? '', $result->applicant_job ?? '', $result->opd_name ?? '']
         );
 
         $filename = 'draft_suketPKL_' . $uniqid . '.docx';

@@ -103,7 +103,7 @@
                                     @endif
                                     @if($row->status == 'success')
                                     <li>
-                                        <a class="dropdown-item d-flex align-items-center gap-3" href="{{ route('forminput-export',['uniqid' => $row->uniq_id]) }}"><i class="fs-4 ti ti-printer"></i>Download Surat Rekomendasi</a>
+                                        <a class="dropdown-item d-flex align-items-center gap-3" href="{{ route('forminput-export',['uniqid' => $row->uniq_id]) }}"><i>donlod</i></a>
                                     </li>
                                     @endif
                                 </ul>

@@ -57,9 +57,9 @@ class UserController extends Controller
         $page = 'Tambah';
         $roles = Role::get();
 
-        $business_field = BusinessField::all();
-        $business_category = BusinessCategory::all();
-        return view('content.user.form', compact('page','roles', 'business_field', 'business_category'));
+        $opds = Opd::all();
+        
+        return view('content.user.form', compact('page','roles','opds'));
     }
 
     /**
